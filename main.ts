@@ -1,6 +1,6 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response, Router } from "express";
 import { engine } from "express-handlebars";
-import { routes } from "./routes/routes.js";
+import { regRoute } from "./routes/regRoute.js";
 
 const app = express();
 const port = 8080;
@@ -28,7 +28,7 @@ app.get('/reg', (req, res) => {
     res.render('reg')
 })
 
-app.use('/api', routes);
+app.use('/api', regRoute);
 
 
 app.listen(port, () => {
