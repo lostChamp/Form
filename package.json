@@ -2,18 +2,19 @@
   "name": "forma",
   "version": "1.0.0",
   "description": "Write info in JSON from WebFrom",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/main.js"
+    "start": "node dist/index.js"
   },
   "author": "lostChamp",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.15",
     "@types/hbs": "^4.0.1",
+    "@types/multer": "^1.4.7",
     "@types/uuid": "^9.0.0"
   },
   "dependencies": {
@@ -21,6 +22,8 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "hbs": "^4.2.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
     "typescript": "^4.9.4"
   }
 }

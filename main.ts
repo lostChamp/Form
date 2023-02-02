@@ -1,9 +1,9 @@
-import express, { Request, Response, Router } from "express";
+import express from "express";
 import { engine } from "express-handlebars";
 import { regRoute } from "./routes/regRoute.js";
-
+import {uploadRoute} from "./routes/uploadRoute.js";
+import {welcomePageRoute} from "./routes/welcomePageRoute.js";
 const app = express();
-const port = 8080;
 
 //настройка движка представлений и основной страницы
 app.engine("hbs", engine(
@@ -18,19 +18,11 @@ app.engine("hbs", engine(
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
-app.get('/', (req, res) => {
-    res.render('welcomepage', {
-        title: 'MyPage'
-    })
-});
-
-app.get('/reg', (req, res) => {
-    res.render('reg')
-})
-
+app.use('/', welcomePageRoute);
+app.use('/', regRoute);
+app.use('/', uploadRoute);
 app.use('/api', regRoute);
+app.use('/api', uploadRoute);
 
 
-app.listen(port, () => {
-    console.log(`Сервер начал прослушивание на http://localhost:${port}`);
-});
+export {app}

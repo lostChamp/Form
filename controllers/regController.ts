@@ -13,4 +13,8 @@ export class regController {
             title: "OK"
         });
     }
+
+    render(req: Request, res: Response) {
+        res.render('reg');
+    }
 }
