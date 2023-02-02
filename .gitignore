@@ -3,3 +3,4 @@ dist/
 pict/
 package-lock.json
 tsconfig.json
+.idea/
