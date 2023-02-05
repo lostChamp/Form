@@ -1,6 +1,7 @@
 node_modules/
 dist/
 pict/
+db/
 package-lock.json
 tsconfig.json
 .idea/

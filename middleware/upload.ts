@@ -6,10 +6,10 @@ type DestinationCallback = (error: Error | null, destination: string) => void;
 type FileNameCallback = (error: Error | null, filename: string) => void;
 
 const storage = multer.diskStorage({
-    destination(req, file: Express.Multer.File, cb: DestinationCallback): void{
+    destination(req: Request, file: Express.Multer.File, cb: DestinationCallback): void{
         cb(null, 'pict/');
     },
-    filename(req, file: Express.Multer.File, cb: FileNameCallback){
+    filename(req: Request, file: Express.Multer.File, cb: FileNameCallback){
         const date = moment().format('DDMMYYYY-HHmmss_SSS');
         cb(null, `${date} - ${file.originalname}`)
     }
