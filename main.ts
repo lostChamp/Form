@@ -21,9 +21,8 @@ app.set('views', './views');
 //частичные представления
 hbs.registerPartials('/views/partials');
 
+app.use(express.json());
 app.use('/', welcomePageRoute);
-app.use('/', regRoute);
-app.use('/', uploadRoute);
 app.use('/api', regRoute);
 app.use('/api', uploadRoute);
 

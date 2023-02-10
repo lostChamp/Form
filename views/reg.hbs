@@ -9,10 +9,21 @@
 <body>
     <div id="reg-container">
         <form  action="/api/reg" method="post">
-            <label for="name-id">Имя</label>
-            <input type="text" name="name" id="name-id">
+            <label id="f-name-id">Введите ваше имя</label>
+            <input type="text" name="fname" id="f-name-id">
+
+            <label id="s-name-id">Введите вашу фамилию</label>
+            <input type="text" name="sname" id="s-name-id">
+
+            <label for="user-name-id">Имя</label>
+            <input type="text" name="name" id="user-name-id">
+
+            <label id="email-id">Введите ваш e-mail</label>
+            <input type="email" name="email" id="email-id">
+
             <label for="pass-id">Пароль</label>
             <input type="password" name="pass" id="pass-id">
+
             <input type="submit" name="sub" id="sub-id" value="Отправить">
         </form>
     </div>

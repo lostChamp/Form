@@ -8,7 +8,7 @@ const regControllerClass = new regController;
 
 regRoute.get('/reg', regControllerClass.render);
 
-regRoute.post('/reg', urlencodedParse, regControllerClass.register);
+regRoute.post('/reg', urlencodedParse, regControllerClass.createUser);
 
 
 
